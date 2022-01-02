@@ -147,10 +147,16 @@ test_array = np.arange(10).reshape(2, 5)
 print(test_array)
 print(test_array[(0, 1)])
 print(test_array[:, 1])
-"""
 test_array = np.arange(27).reshape(3, 3, 3)
 print(test_array)
 print(test_array[0, 0, 0])
 print(test_array[:, 1, 0])
 print(test_array[:, 1:2, :])
+"""
 
+"""
+For iterating through an array in a loop, you can have it go through the first index repetitively
+test_array = np.arange(10).reshape(5, 2)
+for row in test_array:
+    print(row)
+"""

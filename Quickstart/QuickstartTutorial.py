@@ -160,3 +160,54 @@ test_array = np.arange(10).reshape(5, 2)
 for row in test_array:
     print(row)
 """
+
+"""
+There are multiple ways to reshape an array in numpy
+
+test_array = np.arange(10).reshape(2, 5)
+print(test_array)
+
+    Reshape changes the shape of the array into the specified values
+print(test_array.reshape(5, 2))
+
+    array.ravel() unravels the array into one long axis
+print(test_array.ravel())
+
+    array.T transposes it, meaning that it basically rotates the array 90 degrees clockwise
+print(test_array.T)
+
+    Whereas .reshape returns the reshaped array, you can use .resize to change the variable itself without using array =
+test_array.resize(5, 2)
+print(test_array)
+
+    You can use a -1 in reshape to have it automatically calculated to what it should be
+test_array = np.arange(27)
+print(test_array.reshape(3, 3, -1))
+"""
+
+
+"""
+You can stack arrays on top of eachother using vstack (vertical stack) and hstack (horizontal stack)
+test_array1 = np.arange(6).reshape(3, 2)
+test_array2 = np.arange(6, 12).reshape(3, 2)
+print(np.vstack((test_array1, test_array2)))
+print(np.hstack((test_array1, test_array2)))
+"""
+
+"""
+You can split arrays both horizontally and vertically, with hsplit and vsplit respectively
+The easiest way to think of it is that the horizontal and vertical split, cut it the opposite way of their name. So an 
+hsplit would make vertical cuts in an array, and a vsplit would make horizontal cuts
+test_array = np.arange(24).reshape(4, 6)
+print(test_array)
+
+    You can use a single value to specify how many arrays you want it to be split into
+print(np.hsplit(test_array, 3))
+
+    Or a tuple in order to specify at what columns/rows it should split at
+print(np.hsplit(test_array, (3, 4)))
+
+    Same process for vsplit
+print(np.vsplit(test_array, 2))
+print(np.vsplit(test_array, (1, 3)))
+"""
